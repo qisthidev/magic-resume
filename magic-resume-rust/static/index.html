@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Resume - Build Your Professional Resume</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">✨ Magic Resume</h1>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Dashboard</a>
+                    <a href="#" class="nav-link">Templates</a>
+                    <a href="#" class="nav-link">Settings</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <section class="hero">
+                    <h2>Build Your Professional Resume in Minutes</h2>
+                    <p>Create beautiful, ATS-friendly resumes with our modern resume builder powered by AI.</p>
+                    <div class="hero-actions">
+                        <button id="create-resume-btn" class="btn btn-primary">Create New Resume</button>
+                        <button id="view-resumes-btn" class="btn btn-secondary">View My Resumes</button>
+                    </div>
+                </section>
+
+                <section id="resume-list" class="resume-list" style="display: none;">
+                    <h3>Your Resumes</h3>
+                    <div id="resumes-container" class="resumes-grid">
+                        <!-- Resumes will be loaded here -->
+                    </div>
+                </section>
+
+                <section id="resume-editor" class="resume-editor" style="display: none;">
+                    <div class="editor-layout">
+                        <aside class="editor-sidebar">
+                            <div class="sidebar-section">
+                                <h4>Basic Information</h4>
+                                <form id="basic-info-form">
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="title">Professional Title</label>
+                                        <input type="text" id="title" name="title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="text" id="location" name="location">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h4>Experience</h4>
+                                <button id="add-experience-btn" class="btn btn-sm">Add Experience</button>
+                                <div id="experience-list"></div>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h4>Education</h4>
+                                <button id="add-education-btn" class="btn btn-sm">Add Education</button>
+                                <div id="education-list"></div>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h4>Skills</h4>
+                                <textarea id="skills-content" placeholder="List your skills..."></textarea>
+                                <div class="ai-actions">
+                                    <button id="grammar-check-btn" class="btn btn-sm">Check Grammar</button>
+                                    <button id="polish-text-btn" class="btn btn-sm">Polish Text</button>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <main class="editor-preview">
+                            <div class="preview-header">
+                                <h4>Resume Preview</h4>
+                                <div class="preview-actions">
+                                    <button id="save-resume-btn" class="btn btn-primary">Save</button>
+                                    <button id="export-pdf-btn" class="btn btn-secondary">Export PDF</button>
+                                </div>
+                            </div>
+                            <div id="resume-preview" class="resume-preview-content">
+                                <!-- Resume preview will be rendered here -->
+                            </div>
+                        </main>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Magic Resume. Built with Rust and Silent Framework.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

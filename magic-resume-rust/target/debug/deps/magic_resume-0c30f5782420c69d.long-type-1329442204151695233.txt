@@ -1,0 +1,1 @@
+for<'a> Router<AIState>: tower::Service<IncomingStream<'a>>

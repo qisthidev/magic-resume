@@ -1,0 +1,1 @@
+Router<AppState, _>: Service<axum::http::Request<axum::body::Body>>
